@@ -1,0 +1,114 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    color: #4A3B32;
+    background-color: #FFF5F7;
+    background-image: 
+      radial-gradient(#FBD5E0 0.75px, transparent 0.75px),
+      radial-gradient(#FBD5E0 0.75px, #FFF5F7 0.75px);
+    background-size: 30px 30px;
+    background-position: 0 0, 15px 15px;
+  }
+
+  h1, h2, h3, .font-cute {
+    font-family: 'Fredoka', cursive, sans-serif;
+  }
+
+  .font-handwriting {
+    font-family: 'Itim', 'Sacramento', cursive, sans-serif;
+  }
+}
+
+/* Custom Soft Animations & Utilities */
+@keyframes float {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-10px) rotate(2deg); }
+}
+
+@keyframes float-slow {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-16px) rotate(-3deg); }
+}
+
+@keyframes breathe {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.03); }
+}
+
+@keyframes wiggle {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(-8deg); }
+  75% { transform: rotate(8deg); }
+}
+
+@keyframes heartBeat {
+  0%, 100% { transform: scale(1); }
+  14% { transform: scale(1.15); }
+  28% { transform: scale(1); }
+  42% { transform: scale(1.15); }
+  70% { transform: scale(1); }
+}
+
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+}
+
+.animate-float-slow {
+  animation: float-slow 6s ease-in-out infinite;
+}
+
+.animate-breathe {
+  animation: breathe 3.5s ease-in-out infinite;
+}
+
+.animate-wiggle {
+  animation: wiggle 0.6s ease-in-out infinite;
+}
+
+.animate-heartbeat {
+  animation: heartBeat 2s infinite;
+}
+
+/* Glassmorphism Soft Card */
+.glass-card {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 2px solid rgba(253, 226, 236, 0.8);
+  box-shadow: 0 10px 30px -5px rgba(232, 159, 173, 0.15), 0 4px 12px rgba(255, 182, 193, 0.1);
+}
+
+/* Fabric/Plushie Card Effect */
+.plushie-card {
+  background-color: #FFFFFF;
+  border: 3px dashed #F8B4C4;
+  border-radius: 1.5rem;
+  box-shadow: 0 12px 35px -8px rgba(232, 159, 173, 0.2);
+  position: relative;
+}
+
+.plushie-card::before {
+  content: '';
+  position: absolute;
+  inset: -6px;
+  border: 1px solid rgba(248, 180, 196, 0.4);
+  border-radius: 1.75rem;
+  pointer-events: none;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #FFF0F3;
+}
+::-webkit-scrollbar-thumb {
+  background: #F4A2B7;
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #E8839D;
+}
